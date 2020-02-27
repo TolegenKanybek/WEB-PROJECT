@@ -1,0 +1,27 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product">
+    <img [src]="product.image" width="200">
+
+ <h4>
+  Price:{{product.price}}
+ </h4>
+
+  <p *ngIf="product.description">
+  {{ product.description }}
+   
+  </p>
+
+  <p *ngIf="product.rating">
+  Rating:{{product.rating}}
+  </p>
+
+  <a *ngIf="product.link" [href]="product.link" [target]="_blank">
+   link to aliexpress
+  </a>
+
+</div>
+
+
+
+
