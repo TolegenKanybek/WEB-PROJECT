@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>github.com</title>
+    </head>
+    <style>
+        body{
+            font-family: "Helvetica", sans-serif;
+        }
+        div .form1{
+            display: inline-block;
+            margin:10px 3.5px 10px 3.5px;
+            background-color: #211F1F;
+            color:#211F1F;
+        }
+        div{
+            background-color:#211F1F;
+            width:1270;
+          
+        }
+
+        .form1 .why-github{
+            background-color:#211F1F;
+            color:white;
+            border:none;
+        }
+         #search{
+            background-color:#ccc5c53b;
+            color:white;
+            border:none;
+           margin-left:400px;
+           padding:10px 5px 10px 5px;
+           display:inline-block;
+        }
+         .form1 #sign-in{
+          display: inline-block;
+            margin:20px 3.5px 20px 3.5px;
+            padding:7px 5px 7px 5px;
+            background-color:#211F1F;
+            color:white;
+            border:none;
+         }
+         .form1 #sign-up{
+             display: inline-block;
+             margin:20px 3.5px 20px 3.5px;
+             padding:7px 5px 7px 5px;
+            background-color:#211F1F;
+            color:white;
+            border-radius: 4px;
+            border:1px grey solid;
+            
+         }
+         #white-block{
+             position:relative;
+            z-index: 2;
+             margin-top:20px;
+            margin-left:800px;
+            
+
+            padding:20px 20px 20px 20px;
+            background-color: whitesmoke;
+            width:320px;
+            
+         }
+      
+         #black-block{
+            position: absolute;
+           z-index: 1;
+            margin-top:-490px;
+            height: 425px;
+            width:998px;
+            background-color:#24292e;
+            color:white;
+            padding-left:250px;
+            padding-top:100px;
+            font-family: sans-serif;
+         }
+         #white-block .data-input{
+             width:315px;
+             height:30px;
+             border-radius: 5px;
+             font-size:5px;
+         }
+         #green-button{
+             background-color: green;
+             color:white;
+             border:none;
+             border-radius: 5px;
+             padding:20px 100px 20px 100px;
+             margin-top:10px;
+             margin-bottom:10px;
+         }
+         #username{
+             margin-top:15px;
+            
+         }
+         #email{
+             margin-top: 15px;
+             margin-bottom: 15px;
+         }
+         #password{
+             margin-top:20px;
+             margin-bottom: 20px;
+         }
+   
+        
+            
+    </style>
+    <body>
+        <div>
+            <img style="display: inline-block; position: relative; z-index:3;width:50px;" src="C:\Users\Lenovo\Desktop\logo" alt="logo">
+            <form class="form1"> 
+                 <select name="Why Github?" class="why-github">
+                     <option value="Why Github">Why github?</option>
+                 </select>
+                </form>
+          
+            <form class="form1">
+                <select name="enterprise" class="why-github">
+                    <option value="Enterprise">Enterprise</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </form>
+            <form class="form1"> 
+                <select name="Explore" class="why-github">
+                    <option value="Explore">Explore</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </form>
+            <form class="form1">
+                <input type="submit" value="MarketPlace" class="why-github">
+            </form>
+            <form class="form1">
+                <select name="Pricing" class="why-github">
+                    <option value="Pricing">Pricing</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </form>
+            <form class="form1">
+                <input  id="search" type="text" placeholder="Search Github">
+                </form>
+                <form class="form1">
+                    <input type="submit" class="form1" id="sign-in" value="Sign in">
+                </form>
+                <form class="form1">
+                    <input type="submit" class="form1" id="sign-up" value="Sign up">
+                </form>
+        </div>
+        <div id="white-block">
+            <form>
+                <label for="username"><strong>Username</strong></label><br>
+                <input type="text" id="username" name="username" class="data-input"><br>
+                <label for="email"><strong>Email</strong></label><br>
+                <input type="text" id="email" name="email" class="data-input"><br>
+                <label for="password"><strong>Password</strong></label><br>
+                <input type="password" id="password" name="password" class="data-input"><br>
+                <p style="font-size: x-small;">Make sure it's at least 15 characters OR at least 8 characters including<br>
+                     a number and a lowercase latter. <a href="https://www.google.com/search?q=learn+more&oq=learn+more&aqs=chrome..69i57j0l7.3851j0j9&sourceid=chrome&ie=UTF-8">Learn more.</a></p>
+                     <input type="submit" value="Sign Up for GitHub" id="green-button">
+                     <p style="font-size: x-small;">By clicking "Sign Up for GitHub", you agree to our <a href="">Terms of Service</a><br> and <a>Privacy Statement.</a> We'll occasionally send you account related<br> email </p>
+            </form>
+        </div>
+        <div id="black-block">
+            <h1 style="font-size: 60px;">Bulit for<br> developers</h1>
+            <p style="color:grey; font-size:20px;" >Github is development platform inspired by the<br> 
+                way you work. From <span style="color:white">open source</span> to <span style="color:white;">business</span>, you<br>
+            can host and review code, manage projects, and<br>
+        build software alongside 40 million developers.</p>
+        </div>
+    </body>
+</html>

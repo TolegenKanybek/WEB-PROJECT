@@ -1,0 +1,17 @@
+
+    <h2>categorylist</h2>
+    <div *ngFor="let category of categories; index of categoryId">
+        <h3>
+            <a [routerLink]="['/categories', categoryId]">
+           
+            {{category.name}}
+        </a>
+        </h3>
+       
+    </div>
+       <!-- <a [routerLink]="['/product',id]">Equipment</a>
+        <a [routerLink]="['/product',id]">Clothes</a>-->
+
+
+
+
