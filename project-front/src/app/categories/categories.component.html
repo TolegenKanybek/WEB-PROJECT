@@ -1,0 +1,8 @@
+<div> 
+    <div>
+      <ul>
+        <link href="https://fonts.googleapis.com/css?family=Istok+Web|Rock+Salt&display=swap" rel="stylesheet">
+        <li *ngFor = "let category of categories"><a  [routerLink]="['/categories/', category.categoryId]">{{category.title}}</a></li>
+      </ul>
+    </div>
+  </div>

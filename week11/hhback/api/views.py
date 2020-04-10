@@ -36,7 +36,6 @@ def company_vacancies(request, company_id):
     return JsonResponse(vacancies_json, safe=False)
 
 
-
 def vacancy_detail(request, vacancy_id):
     try:
         vacancy = Vacancy.objects.get(id=vacancy_id)

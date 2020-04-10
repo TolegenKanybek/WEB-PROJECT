@@ -1,0 +1,19 @@
+.bg-img
+{
+    min-height: 100vh;
+    width: 100%;
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Rock Salt', cursive;
+    text-decoration: line-through;
+    
+}
+#logo-phrase{
+    text-align: center;
+    font-size:xx-large;
+}
+
+

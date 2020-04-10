@@ -1,0 +1,61 @@
+#title{
+    text-align: center;
+    color: gray;
+}
+.clothesClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 0 0 33%;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.clothesItem{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 0;
+}
+.clothesImage{
+    width: 100%;
+}
+.categoryList{
+    color: gray;
+    margin-left: 30px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    margin-left: 8%;
+}
+
+.nameStyle{
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+.PriceStyle{
+    color: black;
+    font-size: medium;
+    font-weight: 900;
+}
+#card{
+    width: 25%;
+    height: 5%;
+    border-width: 1px;
+    border-color: burlywood;
+    border-radius: 5px;
+    color: black;
+    background-color: wheat;
+}
+.textBlock{
+    text-align: center;
+}
+
+.clothList{
+    transform: translate(0%, 2%);
+}

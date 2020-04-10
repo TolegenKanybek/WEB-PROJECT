@@ -1,0 +1,33 @@
+.categories{
+    transform: translate(1%, 20%);
+   
+  }
+  ul{
+      list-style: none;
+      font-family: 'Rock Salt', cursive;
+      text-decoration: line-through;
+      background: black;
+      color:white;
+     
+     
+  }
+  li a{
+  
+      color: white;
+      font-weight: 300;
+      font-size:50px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      padding-top: 10px;
+      margin-top:80px;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      
+      
+  }
+
+
+
+
+  
