@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.http import HttpResponse
+
+
+#def default_view(request):
+    #return HttpResponse("Default View")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
+    #path('', default_view, name='default_view'),
 ]
