@@ -18,6 +18,7 @@ from django.urls import path,include
 from django.http import HttpResponse
 
 
+
 #def default_view(request):
     #return HttpResponse("Default View")
 

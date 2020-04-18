@@ -4,18 +4,24 @@ from api.models import Company, Vacancy
 
 
 class CompanySerializer(serializers.Serializer):
-    id = serializers.IntegerField(Read_Only=True)
+    id = serializers.IntegerField()
     name = serializers.CharField()
-    description = serializers.TextField()
+    description = serializers.CharField()
     city = serializers.CharField()
-    address = serializers.TextField()
+    address = serializers.CharField()
 
     def create(self, validated_data):
-        company = Company.objects.create(name=validated_data.get('name'))
+        company = Company.objects.create(name=validated_data('name'),
+                                         description=validated_data('description'),
+                                         city=validated_data('city'),
+                                         address=validated_data('address'))
         return company
 
     def update(self, instance, validated_data):
         instance.name = validated_data.get('name', instance.name)
+        instance.description = validated_data.get('description', instance.description)
+        instance.city = validated_data.get('city', instance.city)
+        instance.address = validated_data.get('address', instance.address)
         instance.save()
         return instance
 

@@ -1,1 +1,4 @@
-<p>company-list works!</p>
+<h1 class="title">Companies</h1>
+<div *ngFor="let company of companies" class="comp-item" routerLink="/companies/:{{company.id}}">
+  <a>{{ company.name }}</a>
+</div>
