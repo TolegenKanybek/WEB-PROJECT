@@ -21,9 +21,8 @@ export class VacancyListComponent implements OnInit {
 
   getVacancyList() {
     let id = this.route.snapshot.paramMap.get('id');
-    id = id.substr(1);
-    this.companyService.getVacancyList(id)
-      .subscribe(vacancies => {
+    
+    this.companyService.getVacancyList(id).subscribe(vacancies => {
         this.vacancies = vacancies;
       });
   }

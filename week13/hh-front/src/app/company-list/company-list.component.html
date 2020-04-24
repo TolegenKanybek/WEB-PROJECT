@@ -1,4 +1,5 @@
-<h1 class="title">Companies</h1>
-<div *ngFor="let company of companies" class="comp-item" routerLink="/companies/:{{company.id}}">
-  <a>{{ company.name }}</a>
+<h1>Companies</h1>
+<div *ngFor="let company of companies">
+  <a [routerLink]="'/companies/'+ company.id">{{ company.name }}</a>
 </div>
+

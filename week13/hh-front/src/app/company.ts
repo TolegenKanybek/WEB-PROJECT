@@ -5,3 +5,7 @@ export interface Company{
     city:string,
     address:Text
 }
+
+export class LoginResponse{
+    token:string;
+}

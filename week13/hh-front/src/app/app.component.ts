@@ -24,21 +24,22 @@ export class AppComponent implements OnInit {
   }
 
   login() {
-    this.companyService.login(this.username, this.password)
-      .subscribe(result => {
+   // this.logged=true;
+   this.companyService.login(this.username, this.password)
+      .subscribe(res => {
 
-        localStorage.setItem('token', result.token);
+        localStorage.setItem('token', res.token);
 
         this.logged = true;
 
         this.username = '';
         this.password = '';
-      });
+      })
   }
-
+  
   logout() {
     localStorage.clear();
     this.logged = false;
   }
-
-}
+  
+  }

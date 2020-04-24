@@ -21,7 +21,7 @@ class CompanyListAPIView(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response({'error': serializer.errors}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-
+"""""
 @api_view(['GET', 'POST'])
 def company_list(request):
     if request.method == 'GET':
@@ -34,10 +34,11 @@ def company_list(request):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response({'error': serializer.errors}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+"""""
 
 
 class CompanyDetailsAPIView(APIView):
-    def get(self,request,company_id):
+    def get(self, request, company_id):
         try:
             company = Company.objects.get(id=company_id)
         except Company.DoesNotExist as e:
@@ -59,7 +60,7 @@ class CompanyDetailsAPIView(APIView):
             return Response(serializer.data)
         return Response({'error': serializer.errors})
 
-    def delete(self,request,companyy_id):
+    def delete(self, request, company_id):
         try:
             company = Company.objects.get(id=company_id)
         except Company.DoesNotExist as e:
@@ -151,7 +152,7 @@ class VacancyDetailAPIView(APIView):
             return Response(serializer.data)
         return Response({'error': serializer.errors})
 
-    def delete(self,request,vacancy_id):
+    def delete(self, request, vacancy_id):
         try:
             vacancy = Vacancy.objects.get(id=vacancy_id)
         except Vacancy.DoesNotExist as e:

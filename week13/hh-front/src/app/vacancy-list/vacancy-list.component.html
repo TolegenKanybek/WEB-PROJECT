@@ -1,7 +1,9 @@
-<h1 class="title-vac">Vacancies</h1>
-<div *ngFor="let vacancy of vacancies" class="item">
+<h1>Vacancies</h1>
+<div *ngFor="let vacancy of vacancies">
     <a>{{ vacancy.name }}</a>
     {{vacancy.description}}
         {{vacancy.salary}}
 </div>
+
+
 

@@ -8,7 +8,7 @@ import {CompanyService} from '../company.service';
   styleUrls: ['./company-list.component.css']
 })
 export class CompanyListComponent implements OnInit {
-  companies: Company[];
+  companies: Company[]=[];
 
   constructor(private companyService: CompanyService) {
   }
@@ -24,10 +24,9 @@ export class CompanyListComponent implements OnInit {
       });
   }
 
-  deleteCategory(id) {
+  deleteCompany(id) {
     this.companyService.deleteCompany(id).subscribe(res => {
-      // this.categories = this.categories.filter(c => c.id != id);
-      // this.getCategoryList();
+     
     });
   }
 

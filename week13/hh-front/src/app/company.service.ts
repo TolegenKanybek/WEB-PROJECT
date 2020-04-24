@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Company} from './company';
+import {Company,LoginResponse} from './company';
 import {Vacancy} from './vacancy';
 
-export class LoginResponse {
-    token: string;
-  }
+
 
 
 @Injectable({
@@ -14,7 +12,7 @@ export class LoginResponse {
   })
   export class CompanyService {
   
-    BASE_URL = 'http://127.0.0.1:8000';
+    BASE_URL = 'http://localhost:8000';
     constructor(private http: HttpClient) {}
   
     getCompanyList(): Observable<Company[]> {
@@ -33,10 +31,18 @@ export class LoginResponse {
       return this.http.get<Vacancy[]>(`${this.BASE_URL}/api/companies/${id}/vacancies/`);
     }
 
+    getVacancyDetail(id):Observable<Vacancy>{
+      return this.http.get<Vacancy>(`${this.BASE_URL}/vacancies/${id}`)
+    }
+
+    getTopTenList():Observable<Vacancy[]>{
+      return this.http.get<Vacancy[]>(`${this.BASE_URL}/api/vacancies/top_ten`)
+    }
+
     login(username, password): Observable<LoginResponse> {
         return this.http.post<LoginResponse>(`${this.BASE_URL}/api/login/`, {
-          username,
-          password
+          username:username,
+          password:password
         });
       }
   }  
