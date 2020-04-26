@@ -7,23 +7,20 @@ import { HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ClothesListService {
+  BASE_URL='http://localhost:8000';
 
-  private clothesUrl = 'api/clothes';
-  private categoriesUrl = 'api/categories';
-  clothes: Clothes[];
 
   constructor(
     private http: HttpClient) { }
 
   getClothesList(): Observable<Clothes[]> {
-    return this.http.get<Clothes[]>(this.clothesUrl);
+    return this.http.get<Clothes[]>(`${this.BASE_URL}/core/clothes/`);
   }
   getClothesByCategory(id: number): Observable<Clothes[]> {
-    const url = `${this.clothesUrl}/?category=${id}`;
-    return this.http.get<Clothes[]>(url);
+    return this.http.get<Clothes[]>(`${this.BASE_URL}/core/categories/${id}/clothes/`);
   }
   getCategoryName(id: number): Observable<any> {
-    const url = `${this.categoriesUrl}/${id}`;
-    return this.http.get(url);
+    return this.http.get(`${this.BASE_URL}/core/categories/${id}`);
   }
+  
 }

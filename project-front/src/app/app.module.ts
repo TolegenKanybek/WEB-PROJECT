@@ -16,7 +16,9 @@ import { LoginComponent } from './login/login.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+//import { InMemoryDataService } from './in-memory-data.service';
+import {FormsModule} from '@angular/forms';
+//import { NewClothesComponent } from './new-clothes/new-clothes.component';
 
 
 @NgModule({
@@ -37,11 +39,9 @@ import { InMemoryDataService } from './in-memory-data.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientModule,
+    FormsModule,
 
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
